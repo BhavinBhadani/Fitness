@@ -20,7 +20,6 @@ struct FitnessTabView: View {
         UITabBar.appearance().scrollEdgeAppearance = apperance
     }
     
-
     var body: some View {
         TabView(selection: $selctedTab) {
             HomeView()
