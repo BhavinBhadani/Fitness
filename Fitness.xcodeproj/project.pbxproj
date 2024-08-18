@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671C2E662C71B26900B75B8E /* ActivityCardView copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C2E652C71B26900B75B8E /* ActivityCardView copy.swift */; };
 		6729E1D12C671F8F00BD489B /* FitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6729E1D02C671F8F00BD489B /* FitnessApp.swift */; };
 		6729E1D32C671F8F00BD489B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6729E1D22C671F8F00BD489B /* ContentView.swift */; };
 		6729E1D52C671F9300BD489B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6729E1D42C671F9300BD489B /* Assets.xcassets */; };
@@ -15,10 +16,11 @@
 		6729E1E12C67210900BD489B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6729E1E02C67210900BD489B /* HomeView.swift */; };
 		6729E1E32C67210F00BD489B /* HistoricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6729E1E22C67210F00BD489B /* HistoricView.swift */; };
 		6729E1E52C67284F00BD489B /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6729E1E42C67284F00BD489B /* ProgressCircleView.swift */; };
-		675B14C62C6DD7EB004BF6E6 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B14C52C6DD7EB004BF6E6 /* ActivityCardView.swift */; };
+		675B14C62C6DD7EB004BF6E6 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B14C52C6DD7EB004BF6E6 /* WorkoutCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		671C2E652C71B26900B75B8E /* ActivityCardView copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityCardView copy.swift"; sourceTree = "<group>"; };
 		6729E1CD2C671F8F00BD489B /* Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6729E1D02C671F8F00BD489B /* FitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessApp.swift; sourceTree = "<group>"; };
 		6729E1D22C671F8F00BD489B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,7 +30,7 @@
 		6729E1E02C67210900BD489B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6729E1E22C67210F00BD489B /* HistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricView.swift; sourceTree = "<group>"; };
 		6729E1E42C67284F00BD489B /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
-		675B14C52C6DD7EB004BF6E6 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
+		675B14C52C6DD7EB004BF6E6 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 			children = (
 				6729E1E02C67210900BD489B /* HomeView.swift */,
 				6729E1E42C67284F00BD489B /* ProgressCircleView.swift */,
-				675B14C52C6DD7EB004BF6E6 /* ActivityCardView.swift */,
+				671C2E652C71B26900B75B8E /* ActivityCardView copy.swift */,
+				675B14C52C6DD7EB004BF6E6 /* WorkoutCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -163,7 +166,8 @@
 				6729E1E32C67210F00BD489B /* HistoricView.swift in Sources */,
 				6729E1E52C67284F00BD489B /* ProgressCircleView.swift in Sources */,
 				6729E1DF2C67208700BD489B /* FitnessTabView.swift in Sources */,
-				675B14C62C6DD7EB004BF6E6 /* ActivityCardView.swift in Sources */,
+				671C2E662C71B26900B75B8E /* ActivityCardView copy.swift in Sources */,
+				675B14C62C6DD7EB004BF6E6 /* WorkoutCardView.swift in Sources */,
 				6729E1E12C67210900BD489B /* HomeView.swift in Sources */,
 				6729E1D32C671F8F00BD489B /* ContentView.swift in Sources */,
 				6729E1D12C671F8F00BD489B /* FitnessApp.swift in Sources */,

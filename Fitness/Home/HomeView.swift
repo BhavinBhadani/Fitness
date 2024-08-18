@@ -50,90 +50,154 @@ struct HomeView: View {
         )
     ]
     
+    var mockWorkouts = [
+        Workout(
+            id: 0,
+            title: "Running",
+            image: "figure.run",
+            tintColor: .green,
+            date: "17 Aug",
+            duration: "42 mins",
+            calories: "200 kcal"
+        ),
+        Workout(
+            id: 1,
+            title: "Running",
+            image: "figure.run",
+            tintColor: .green,
+            date: "17 Aug",
+            duration: "42 mins",
+            calories: "200 kcal"
+        ),
+        Workout(
+            id: 2,
+            title: "Running",
+            image: "figure.run",
+            tintColor: .green,
+            date: "17 Aug",
+            duration: "42 mins",
+            calories: "200 kcal"
+        ),
+        Workout(
+            id: 3,
+            title: "Running",
+            image: "figure.run",
+            tintColor: .green,
+            date: "17 Aug",
+            duration: "42 mins",
+            calories: "200 kcal"
+        )
+    ]
+    
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading) {
-                Text("Welcome")
-                    .font(.largeTitle)
-                    .padding()
-                
-                HStack {
-                    Spacer()
+        NavigationStack {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading) {
+                    Text("Welcome")
+                        .font(.largeTitle)
+                        .padding()
                     
-                    VStack {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Calories")
-                                .font(.callout)
-                                .bold()
-                                .foregroundColor(.red)
-                            
-                            Text("120 kcal")
-                                .bold()
-                        }
-                        .padding(.bottom)
+                    HStack {
+                        Spacer()
                         
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Active")
-                                .font(.callout)
-                                .bold()
-                                .foregroundColor(.green)
+                        VStack {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Calories")
+                                    .font(.callout)
+                                    .bold()
+                                    .foregroundColor(.red)
+                                
+                                Text("120 kcal")
+                                    .bold()
+                            }
+                            .padding(.bottom)
                             
-                            Text("52 mins")
-                                .bold()
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Active")
+                                    .font(.callout)
+                                    .bold()
+                                    .foregroundColor(.green)
+                                
+                                Text("52 mins")
+                                    .bold()
+                            }
+                            .padding(.bottom)
+                            
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Stand")
+                                    .font(.callout)
+                                    .bold()
+                                    .foregroundColor(.blue)
+                                
+                                Text("8 hours")
+                                    .bold()
+                            }
                         }
-                        .padding(.bottom)
                         
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Stand")
-                                .font(.callout)
-                                .bold()
-                                .foregroundColor(.blue)
+                        Spacer()
+                        
+                        ZStack {
+                            ProgressCircleView(progress: $calories, goal: 300, color: .red)
                             
-                            Text("8 hours")
-                                .bold()
+                            ProgressCircleView(progress: $active, goal: 90, color: .green)
+                                .padding(.all, 20)
+                            
+                            ProgressCircleView(progress: $stand, goal: 12, color: .blue)
+                                .padding(.all, 40)
                         }
+                        .padding(.horizontal)
+                        
+                        Spacer()
                     }
+                    .padding()
                     
-                    Spacer()
-                    
-                    ZStack {
-                        ProgressCircleView(progress: $calories, goal: 300, color: .red)
+                    HStack {
+                        Text("Fitness Activity")
                         
-                        ProgressCircleView(progress: $active, goal: 90, color: .green)
-                            .padding(.all, 20)
+                        Spacer()
                         
-                        ProgressCircleView(progress: $stand, goal: 12, color: .blue)
-                            .padding(.all, 40)
+                        Button {
+                            print("View More")
+                        } label: {
+                            Text("Show More")
+                                .padding(.all, 10)
+                                .foregroundColor(.white)
+                                .background(.blue)
+                                .cornerRadius(20)
+                        }
                     }
                     .padding(.horizontal)
                     
-                    Spacer()
-                }
-                .padding()
-
-                HStack {
-                    Text("Fitness Activity")
+                    LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
+                        ForEach(mockActivities, id: \.id) { activity in
+                            ActivityCardView(activity: activity)
+                        }
+                    }
+                    .padding()
                     
-                    Spacer()
+                    HStack {
+                        Text("Recent Workouts")
+                        
+                        Spacer()
+                        
+                        NavigationLink {
+                            EmptyView()
+                        } label: {
+                            Text("Show More")
+                                .padding(.all, 10)
+                                .foregroundColor(.white)
+                                .background(.blue)
+                                .cornerRadius(20)
+                        }
+                    }
+                    .padding(.horizontal)
                     
-                    Button {
-                        print("View More")
-                    } label: {
-                        Text("Show More")
-                            .padding(.all, 10)
-                            .foregroundColor(.white)
-                            .background(.blue)
-                            .cornerRadius(20)
+                    LazyVStack {
+                        ForEach(mockWorkouts, id: \.id) { workout in
+                            WorkoutCardView(workout: workout)
+                        }
                     }
                 }
-                .padding(.horizontal)
-                
-                LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
-                    ForEach(mockActivities, id: \.id) { activity in
-                        ActivityCardView(activity: activity)
-                    }
-                }
-                .padding()
             }
         }
     }
